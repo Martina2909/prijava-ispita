@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava ispita</title>
+    <link rel="stylesheet" href="stil.css">
+    <marquee behavior="prijava" direction="right">Prijava u tijeku</marquee>
+</head>
+<body>
+  <!--Pozadinska slika preuzeta s URL:https://wallpapercave.com/wp/wp9537343.jpg-->
+  
+  
+
+  <section class="grid">
+        <div class="podrucje zaglavlje"> <b>Prijava ispita</b> <br>
+        </div>
+  </section>
+
+    
+    <form  action="akcija.php" method="GET">
+        <fieldset class="dolje">
+          <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Osobni podaci
+          </legend>
+          <ruby>
+            <rb>Započni s prijavom</rb>
+            <rp>（</rp><rt>Početak</rt><rp>）</rp>
+          </ruby>
+          <hr>
+            <input type="text" id="ime_klijent" name="ime_server"
+            placeholder="Unesi ime"/>
+
+            <hr/>
+            <input type="email" placeholder="Email"/>
+
+            <hr/>
+            <input type="password" placeholder="Lozinka"/>
+
+            <hr/>
+            <input type="number" placeholder="Broj X-ice"/>
+
+            <hr/>
+            <input type="date" placeholder="Datum rođenja"/>
+
+            <hr/>
+            <input style="background-color: rgb(202, 163, 163);" type="submit" value="Spremi">
+        </fieldset>
+
+        <fieldset class="gore">
+          <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Podaci o studiju
+          </legend>
+            
+            <b>Razina studija</b>  
+            <hr>
+            <label for="preddiplomski_studij">Preddiplomski studij</label>
+            <input type="radio" id="preddiplomski" name="razina_studija">
+            <br>
+
+            <label for="diplomski_studij">Diplomski studij</label>
+            <input type="radio" id="diplomski" name="razina_studija">
+            <hr>
+            
+            <label for="studij"><b>Godina studija</b></label>
+            <select  name="studij" id="studij">
+              <optgroup label="Preddiplomski studij">
+                <option value="prva">1. godina</option>
+                <option value="druga">2. godina</option>
+                <option value="treca">3. godina</option>
+              </optgroup>
+              <optgroup label="Diplomski studij">
+                <option value="prva">1. godina</option>
+                <option value="druga">2. godina</option>
+              </optgroup>
+            </select> 
+            <hr>
+
+            <button style="background-color: rgb(202, 163, 163);" type="button">Spremi</button>
+        </fieldset>
+
+        <fieldset class="sivo">
+          <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Ispitni rok
+          </legend>
+          <label for="ispitni"><b>Odaberi ispitni rok</b></label>
+          <select name="ispitni" id="ispitni">
+            <option value="zimski">zimski</option>
+            <option value="ljetni">ljetni</option>
+          </select>
+          <hr>
+
+          <label for="rok"><b>Odaberi vrstu roka</b></label>
+            <select id="rok">
+              <option value="redovni">redovni</option>
+              <option value="izvanredni">izvanredni</option>
+            </select>
+          <hr>
+
+          <label for="kolegij"><b>Upišite željeni kolegij</b></label> 
+          <input list="naziv_kolegija" id="kolegij" name="kolegij" />
+          <datalist id="naziv_kolegija">
+            <option value="Oblikovanje mrežnih stranica">
+            <option value="Organizacija i poslovanje knjižnice">
+            <option value="Engleski jezik za humanističke i društvene znanosti">
+            <option value="Osnove informacijske sigurnosti">
+            <option value="Informacijski izvori i službe">
+            <option value="Sociologija knjige i čitanja"></option>
+          </datalist>
+          <hr>
+
+          <button style="background-color: rgb(202, 163, 163);" type="button">Spremi</button>
+        </fieldset>
+
+        <fieldset class="zadnje">
+          <legend class="uredi" style="text-align: center; font-family: Imprint MT Shadow;">
+            Prosječna prolaznost
+          </legend>
+          <label style="text-align: center;" for="prolaznost"><b>Kakvu prolaznost očekuješ?</b></label>
+          <textarea id="prolaznost" name="prolaznost" rows="2" cols="50"></textarea>
+          <hr>
+          
+          <form action="/action_page.php" method="get">
+            Korisničko ime: <input type="text" name="naziv">
+            <keygen name="security">
+
+            <form action="/action_page.php" method="get">
+              Lozinka: <input type="text" name="naziv">
+              <keygen name="security"
+
+          <input style="background-color: rgb(202, 163, 163);" type="submit">
+          <hr>
+
+          <p><b>Trenutno stanje ECTS bodova</b></p>
+          <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" value="20">
+            +<input type="number" id="b" value="10">
+            =<output name="x" for="a+ b"></output>
+          </form>
+
+          <hr>
+          <p>Prosječna prolaznost generacije</p>
+          <label for="oms">OMS</label>
+          <progress id="oms" value="54" max="100"> 54% </progress>
+          <br>
+          
+          <label for="opk">OPK</label>
+          <meter id="opk" value="25" min="0" max="30">25 out of 30</meter><br>
+          
+          <label for="ois">OIS</label>
+          <meter id="ois" value="0.7">70%</meter> <br>
+
+          <label for="skc">SKČ</label>
+          <meter id="skc" value="0.68">68%</meter>
+          <hr>
+          <details style="text-align: center;">
+            <summary><b>Mala motivacija</b></summary>
+            <p style="font-size: 2em;">Sve se može uz šalicu omiljenog napitka. <br> <br>
+              ¯\_( ͡~ ͜ʖ͡° )_/¯</p>
+          </details>
+          <hr>
+          <img src="logo.png" alt="logo" style="width: 800px; float: right; height: 150px;">
+          
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
